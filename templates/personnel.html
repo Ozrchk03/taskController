@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Список працівників{% endblock %}
+{% block content %}
+    <h1>Список працівників</h1>
+    <table class="table mt-4">
+        <thead>
+            <tr>
+                <th scope="col">ПІБ</th>
+                <th scope="col">Компетенції</th>
+                <th scope="col">Рівень зайнятості</th>
+                <th scope="col">Дії</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for worker in personnel %}
+            <tr>
+                <td>{{ worker.name }}</td>
+                <td>{{ worker.competencies }}</td>
+                <td>{{ worker.employment_level }}</td>
+                <td><button class="btn btn-danger">Тестова дія</button></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <button class="btn btn-success mt-3">Призначити автоматично</button>
+{% endblock %}

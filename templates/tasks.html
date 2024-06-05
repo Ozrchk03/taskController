@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Задачі проекту{% endblock %}
+{% block content %}
+    <h1>Проект "Тестовий проект 1"</h1>
+    <h2>Задачі проекту</h2>
+    <ul class="list-group mt-4">
+        {% for task in tasks %}
+        <li class="list-group-item">
+            <h3>{{ task.title }}</h3>
+            <p>{{ task.description }}</p>
+            <p><strong>Дедлайн:</strong> {{ task.deadline }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="#" class="btn btn-primary mt-3">Додати задачу</a>
+{% endblock %}

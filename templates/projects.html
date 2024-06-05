@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Список проектів{% endblock %}
+{% block content %}
+    <h1>Список проектів</h1>
+    <table class="table mt-4">
+        <thead>
+            <tr>
+                <th scope="col">Назва проекту</th>
+                <th scope="col">Опис</th>
+                <th scope="col">Дедлайн</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for project in projects %}
+            <tr>
+                <td>{{ project.name }}</td>
+                <td>{{ project.description }}</td>
+                <td>{{ project.deadline }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'add_project' %}" class="btn btn-primary mt-3">Додати проект</a>
+{% endblock %}

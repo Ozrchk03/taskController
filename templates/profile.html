@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Профіль користувача{% endblock %}
+{% block content %}
+    <h1>Профіль</h1>
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h3>Основна інформація</h3>
+                    <p>ПІБ: <span id="fullName">Тестовий користувач</span></p>
+                    <p>Дата народження: <span id="dob">01.01.2000</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h3>Вміння і навички</h3>
+                    <p id="skills">Тестові навички</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endbloc
